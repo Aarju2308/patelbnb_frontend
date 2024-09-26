@@ -15,7 +15,11 @@
 - **Font Awesome**: For icons.
 - **NgRx** (optional): For state management.
 
+---
+
 [Backend API Documentation](https://github.com/Aarju2308/patenbnb_backend) includes detailed information on the backend's API endpoints, authentication flow, and database setup.
+
+---
 
 ### Package.json Overview
 Key dependencies used in the project (from `package.json`):
