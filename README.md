@@ -1,27 +1,171 @@
-# PatelbnbFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.0.
+# PatelBNB Frontend
 
-## Development server
+## Description
+**PatelBNB Frontend** is the client-side of the **PatelBNB** property rental platform, built with **Angular** and **SCSS**. It interacts with the backend services for property listings, user authentication, and booking management.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Technologies
+- **Angular (latest version)**: A framework for building dynamic web applications.
+- **TypeScript**: The main programming language.
+- **SCSS (Sassy CSS)**: For styling with flexibility and better structure.
+- **RxJS**: For managing asynchronous data streams.
+- **Angular Router**: For client-side routing.
+- **Angular Forms**: For form building and validation.
+- **Bootstrap** (optional): For responsive design.
+- **Font Awesome**: For icons.
+- **NgRx** (optional): For state management.
 
-## Code scaffolding
+### Package.json Overview
+Key dependencies used in the project (from `package.json`):
+- `@angular/core`: Angular core library.
+- `@angular/forms`: Angular forms module.
+- `rxjs`: Reactive Extensions Library for JavaScript.
+- `@auth0/angular-jwt`: Authentication with JSON Web Tokens.
+- `@fortawesome/fontawesome-free`: FontAwesome icons.
+- `sass`: SCSS preprocessor.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+---
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Prerequisites
+Ensure the following are installed:
+- **Node.js** (LTS version recommended)
+- **Angular CLI** (latest version)
+- **NPM** or **Yarn**
 
-## Running unit tests
+### Clone the Repository
+```bash
+git clone https://github.com/username/PatelBNB-Frontend.git
+cd PatelBNB-Frontend
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### Install Dependencies
+```bash
+npm install
+```
 
-## Running end-to-end tests
+### Environment Configuration
+Create an environment file (`src/environments/environment.ts`) with the following structure:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```typescript
+export const environment = {
+  production: false,
+  apiUrl: 'http://localhost:1323/api',
+  auth0ClientId: 'VjtcXHUuXBG4IJbRaRtsbxXxwfoXbBV0',
+  auth0Domain: 'your-domain.auth0.com',
+  auth0RedirectUri: 'http://localhost:4200/callback',
+};
+```
 
-## Further help
+### Running the Application
+To serve the Angular application locally:
+```bash
+ng serve
+```
+The app will be available at `http://localhost:4200`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+---
+
+## Project Structure
+The project follows the Angular CLI structure:
+
+```
+src/
+ ├── app/
+ │   ├── core/
+ │   │   ├── auth/                # Authentication module
+ │   │   └── model/               # Shared models
+ │   ├── home/                    # Home page component
+ │   │   ├── home.component.html
+ │   │   ├── home.component.scss
+ │   ├── landlord/
+ │   │   ├── properties-create/   # Property creation components
+ │   ├── layout/
+ │   │   ├── navbar/              # Navigation bar component
+ │   ├── shared/
+ │   │   ├── card-listing/        # Reusable listing cards
+ │   │   └── pagination/          # Pagination controls
+ │   ├── assets/                  # Static assets
+ │   └── environments/            # Environment configuration
+ ├── styles.scss                  # Global styles
+ └── main.ts                      # Angular entry point
+```
+
+### Key Folders:
+- **auth**: Contains authentication-related services and components.
+- **model**: Shared data models across the application.
+- **landlord**: Contains components related to landlord functionalities like property listings.
+- **layout**: Houses shared components like navbar and layout configurations.
+- **shared**: Contains reusable components like listing cards and pagination.
+- **assets**: Static files such as images, icons, and fonts.
+- **environments**: Environment-specific configurations.
+
+---
+
+## Features
+- **Property Listings**: Browse, filter, and search properties.
+- **Authentication**: OAuth2 integration for secure login.
+- **Booking Management**: View, create, and cancel bookings.
+- **Responsive Design**: Optimized for mobile and desktop.
+
+---
+
+## Styling with SCSS
+Global and modular SCSS is used throughout the project:
+- `styles/variables.scss`: Global variables like colors and fonts.
+- `styles/mixins.scss`: Reusable SCSS mixins.
+- `styles/global.scss`: Global styles for the app.
+
+Example:
+```scss
+// variables.scss
+$primary-color: #ff5a5f;
+$secondary-color: #00a699;
+
+// mixins.scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// global.scss
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f7f7f7;
+}
+```
+
+---
+
+## Testing
+Run unit tests:
+```bash
+ng test
+```
+
+Run end-to-end tests:
+```bash
+ng e2e
+```
+
+---
+
+## Deployment
+To build the project for production:
+```bash
+ng build --prod
+```
+The build artifacts will be in the `dist/` directory. You can deploy this folder to any hosting service like **Firebase**, **Netlify**, or **AWS S3**.
+
+---
+
+## License
+This project is licensed under the MIT License.
+
+---
+
+## Contact
+For any issues, contact `patelbnb_support@example.com`.
+
