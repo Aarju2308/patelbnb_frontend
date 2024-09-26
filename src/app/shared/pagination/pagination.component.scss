@@ -1,0 +1,47 @@
+// generic-paginator.component.scss
+
+:host {
+    display: flex;
+    justify-content: center; // Center the paginator
+    margin: 20px 0; // Add vertical spacing
+    font-family: Arial, sans-serif; // Change the font style
+  }
+  
+  .mat-paginator {
+    background-color: #F7F7F7; // Light background for the paginator
+    border-radius: 4px; // Rounded corners
+    padding: 10px; // Padding around the paginator
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+  
+    .mat-button {
+      color: #FF5A5F; // Primary Airbnb color
+      &:hover {
+        background-color: rgba(255, 90, 95, 0.1); // Light hover effect
+      }
+    }
+  
+    .mat-paginator-range-label {
+      font-weight: bold; // Make the range label bold
+      color: #484848; // Dark gray text color
+    }
+  
+    .mat-paginator-page-size {
+      font-size: 14px; // Adjust the font size for page size dropdown
+      color: #484848; // Dark gray text color
+    }
+  }
+
+
+
+.listings-container {
+    padding: 20px; // Padding around the container
+    background-color: #fff; // White background for contrast
+    border-radius: 8px; // Rounded corners for the container
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // Soft shadow for depth
+    margin-top: 4rem;
+  }
+  
+  h1, h2, h3, p {
+    color: #484848; // Dark gray text color for headings and paragraphs
+  }
+    

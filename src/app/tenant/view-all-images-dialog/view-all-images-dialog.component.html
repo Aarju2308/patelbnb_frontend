@@ -1,0 +1,7 @@
+<div class="modal-gallery">
+    @for (picture of pictures; track picture.file; let index = $index){
+        <div class="modal-picture"
+         [style.background-image]="'url(' + 'data:' + picture.fileContentType + ';base64,' + picture.file + ')'">
+        </div>
+    }
+</div>

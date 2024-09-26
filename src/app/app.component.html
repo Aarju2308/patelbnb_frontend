@@ -1,0 +1,16 @@
+<p-toast position="top-right"></p-toast>
+<p-confirmDialog>
+    <ng-template pTemplate="message" let-message>
+        <div class="flex flex-column align-items-center w-full gap-3 border-bottom-1 surface-border">
+            <i class="pi pi-exclamation-circle text-6xl text-primary-500"></i>
+            <p>{{ message.message }}</p>
+        </div>
+    </ng-template>
+</p-confirmDialog>
+<app-navbar></app-navbar>
+<div class="grid grid-nogutter mb-5" [class.mx-8]="isListingView">
+    <div class="col mt-5">
+        <router-outlet></router-outlet>
+    </div>
+</div>
+<app-footer></app-footer>

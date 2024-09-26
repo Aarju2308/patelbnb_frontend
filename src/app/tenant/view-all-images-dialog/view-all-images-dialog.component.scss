@@ -1,0 +1,19 @@
+.modal-gallery {
+    display: flex;
+    flex-direction: column; /* Stack images vertically */
+    width: 100%; /* Full width of the container */
+    height: 100%; /* Adjust based on your needs, or use a fixed height */
+    overflow-y: auto; /* Enable vertical scrolling if images exceed container height */
+    padding: 20px; /* Add padding around the edges of the gallery */
+    box-sizing: border-box; /* Include padding in the element's total width and height */
+  }
+  
+  .modal-picture {
+    width: calc(100% - 40px); /* Full width minus horizontal padding (20px each side) */
+    margin: 0 auto 20px; /* Center the image and add bottom margin for spacing */
+    height: 80vh; /* Adjusted height to fit within viewport with padding */
+    background-size: cover; /* Ensure the image covers the entire element */
+    background-position: center; /* Center the image */
+    border-radius: 10px; /* Optional: for rounded corners */
+  }
+  
