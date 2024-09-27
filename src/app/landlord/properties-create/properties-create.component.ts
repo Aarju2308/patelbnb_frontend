@@ -7,7 +7,6 @@ import { Router } from '@angular/router';
 import { Steps } from './steps.model';
 import { CreatedListing, Description, EditListing, NewListing, NewListingInfo } from '../model/listing.model';
 import { NewListingPicture } from '../model/picture.model';
-import { HttpErrorResponse } from '@angular/common/http';
 import { State } from '../../core/model/state.model';
 import { CategoryName } from '../../layout/category/category.model';
 import { CateroryStepComponent } from './step/category-step/category-step.component';
@@ -48,6 +47,7 @@ export class PropertiesCreateComponent {
   locationService = inject(CountryService)
   userService = inject(AuthService);
   router = inject(Router);
+  authService = inject(AuthService);
 
   steps : Steps[] = [
     {
@@ -203,7 +203,7 @@ export class PropertiesCreateComponent {
       this.toastService.send({severity: "success",summary: "Success", detail: "Listing created successfully"});
     }
     this.dialogDynamicRef.close(createdListingState.value!.publicId);
-    this.userService.fetch(true);
+    this.authService.renewAccessToken();
   }
 
   nextStep(){

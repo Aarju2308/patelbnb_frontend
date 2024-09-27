@@ -1,4 +1,5 @@
-const BACKEND_URL = "//localhost:1323"
+const BACKEND_URL = "https://patelbnb.work.gd"
+// const BACKEND_URL = "//localhosh:1323"
 
 export const environment = {
     BACKEND_URL: BACKEND_URL,

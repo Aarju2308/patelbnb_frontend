@@ -10,6 +10,7 @@ import { MessageService } from 'primeng/api';
 import {ToastModule} from "primeng/toast";
 import { NavbarComponent } from './layout/navbar/navbar.component';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { AuthService } from './core/auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -33,10 +34,12 @@ export class AppComponent implements OnInit {
   isListingView : boolean = true;
   toastService = inject(ToastService);
   messageService = inject(MessageService);
+  auth0Service = inject(AuthService)
 
   ngOnInit(): void {
     this.initFontAwesome();
     this.listenToastService();
+    this.auth0Service.initAuthentication();
   }
 
   initFontAwesome() {
