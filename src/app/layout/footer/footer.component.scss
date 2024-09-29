@@ -3,6 +3,19 @@
 .footer {
     background-color: $footerBgColor;
 }
+
+.author{
+    color: $primaryLightColor;
+    font-size: medium;
+
+    a{
+        color: $primaryColor;
+
+        :hover{
+            color: $primaryDarkerColor;
+        }
+    }
+}
   
 fa-icon {
     margin-left: 10px;

@@ -75,7 +75,7 @@ export class HomeComponent implements OnInit,OnDestroy {
   listenToGetAllCategory() {
     effect(()=>{
       const allCategoryListingState = this.tenantListingService.getAllByCategorySig();
-      if (allCategoryListingState.status === 'OK') {
+      if (allCategoryListingState.status === 'OK' && allCategoryListingState.value) {
         this.listings = allCategoryListingState.value?.content;
         this.pageableListing = allCategoryListingState.value!;
         this.loading=false;

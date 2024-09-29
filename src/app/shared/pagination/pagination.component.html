@@ -1,5 +1,8 @@
-<!-- <div class="listings-container">
-    <mat-paginator [length]="pageableData?.totalElements || 0" [pageSize]="pageableData?.size || 20"
-        [pageIndex]="pageableData?.number || 0" (page)="onPageChange($event)">
+<div class="listings-container">
+    <mat-paginator 
+        [length]="pagedData.totalElements || 0" 
+        [pageSize]="pagedData.size || 20"
+        [pageIndex]="pagedData.number || 0" 
+        (page)="onPageChange($event)">
     </mat-paginator>
-</div> -->
+</div>

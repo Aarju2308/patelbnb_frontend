@@ -1,4 +1,4 @@
-const BACKEND_URL = "//localhost:1323"
+const BACKEND_URL = "//localhost:8080"
 
 export const environment = {
     BACKEND_URL: BACKEND_URL,
