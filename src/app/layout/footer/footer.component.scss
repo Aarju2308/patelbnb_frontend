@@ -1,11 +1,30 @@
 @import "../../../assets/scss/airbnb-variables.scss";
 
 .footer {
-    background-color: $footerBgColor;
-}
+    background-color: #f8f9fa; // Light background color
+    border-top: 1px solid #e0e0e0; // Light top border
+    padding: 1rem 1.5rem; // Padding for spacing
+    justify-content: space-between;
   
-fa-icon {
-    margin-left: 10px;
-    font-size: 3px;
-    margin-right: 10px;
-}
+    .left-section {
+      display: flex;
+      align-items: center;
+  
+      .separator {
+        color: #999; // Subtle color for separator icons
+        margin: 0 8px; // Spacing for icons between terms
+      }
+  
+      span {
+        color: #666; // Light gray for text
+      }
+    }
+  
+    .right-section {
+      span {
+        color: $primaryColor; // Slightly darker color for emphasis
+        font-weight: 600; // Make the "A site by Aarju Patel" bold
+      }
+    }
+  }
+  
