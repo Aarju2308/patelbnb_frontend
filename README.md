@@ -17,7 +17,7 @@
 
 ---
 
-[Backend API Documentation](https://github.com/Aarju2308/patenbnb_backend) includes detailed information on the backend's API endpoints, authentication flow, and database setup.
+[Backend API Documentation](https://github.com/Aarju2308/patelbnb_backend) includes detailed information on the backend's API endpoints, authentication flow, and database setup.
 
 ---
 
