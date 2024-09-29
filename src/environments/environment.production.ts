@@ -1,4 +1,4 @@
-const BACKEND_URL = "https://patelbnb.work.gd"
+const BACKEND_URL = "https://patelbnbapi.work.gd"
 // const BACKEND_URL = "//localhosh:1323"
 
 export const environment = {
